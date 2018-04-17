@@ -1,0 +1,1 @@
+function [J_vals] = compute_cost(X,y,theta,m)    J_vals = 1/(2*m)*((X*theta-y)'*(X*theta-y));  end 

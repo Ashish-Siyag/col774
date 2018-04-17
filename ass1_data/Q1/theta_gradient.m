@@ -1,0 +1,1 @@
+function [theta, J_history] = theta_gradient(X,y,alpha,m)    theta = zeros(2,1); % initialize the value of theta to be zero vector      while abs(((X*theta-y)'*X)') > eps % stopping criteria when the value of d(j_theta) < epsilon         theta = theta - alpha/m*((X*theta-y)'*X)';        J_history = compute_cost(X,y,theta,m);      end  end  

@@ -1,0 +1,1 @@
+function [theta,itr] = Gasscent(X,Y)    m = length(X);  alpha = 0.01;    theta = zeros(3,1);  thetax = ones(3,1);  itr = 0;    while (thetax-theta)'*(thetax-theta)> 0.00000001      htheta = 1./(1+e.^-(X*theta)); %hypothesis equation      thetax = theta;      theta = theta - (alpha/m)*((htheta-Y)'*X)'; %gradient asscent convergence      itr +=1;  endend
